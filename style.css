@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+}
+
+a:hover {
+    color: coral;
+}
+
+.menu {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid whitesmoke;
+}
+
+.all_menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    height: 0;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: hight 0.2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.all_menu li {
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.all_menu.open {
+    height: 200px;
+}
+
+.all_menu {
+    display: block;
+}
+
+header {
+    padding: 0 2rem;
+    position: relative;
+}
+
+.link {
+    display: flex;
+    gap: 2rem;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+.bar {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.buton {
+    background-color: darkorange;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    transition: 0.2 ease;
+}
+
+.buton:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.buton:active {
+    scale: .95;
+}
+
+@media (max-width:992px) {
+    .link,
+    .buton {
+        display: none;
+    }
+    .bar {
+        display: block;
+    }
+}
+
+@media (max-width:575px) {
+    .all_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+:root {
+    --main-color: #fd4646;
+    --text-color: #171427;
+    --bg-color: #fff;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    border-radius: 3px;
+    padding: 15px;
+    background: rgb(39, 70, 104);
+    box-shadow: 0 1px 4px hsl(0 4% 15%/10%);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+#user-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    gap: 1.5rem;
+}
+
+.product-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-box:hover {
+    padding: 12px;
+    border: 1px solid #171427;
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.product-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-title {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-top: 10px
+}
+
+button {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+
+/* Style logo link */
